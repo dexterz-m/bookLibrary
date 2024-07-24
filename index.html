@@ -12,17 +12,72 @@
 
         <strong><p id="headerText">BookeD3X</p></strong>
 
-        <button id="signInButton"><strong>Sign in</strong></button>
+        <button id="signInButton" onclick=""><strong>Sign in</strong></button>
 
     </header>
 
     <div id="content">
 
         <div id="library">
-            (books)
+
         </div>
 
-        <button id="addBookButton"><strong>Add book</strong></button>
+        <button class="buttonPopUp" id="addBookButton" onclick="popUpForm()"><img id="plus" src="icons/plus-svgrepo-com.svg"></button>
+        
+
+    </div>
+
+    <div id="popUpContainer">
+
+        <div class="popUpBox">
+
+            <h2>Add new book</h2>
+
+            <form class="popUpForm">
+
+                <div class="forms">
+                    <label class="form-label"
+                            for="name">
+                        Name:
+                    </label>
+                    <input class="form-input" type="text" id="name" required> 
+
+                </div>
+
+                <div class="forms">
+                <label class="form-label"
+                    for="author">
+                    Author:
+                </label>
+                <input class="form-input" type="text" id="author" required> 
+
+                </div>
+
+                <div class="forms">
+                    <label class="form-label"
+                        for="pages">
+                        Pages:
+                    </label>
+                    <input class="form-input" type="number" id="pages" required> 
+                
+                </div>
+
+                <div class="formButtons">
+
+                    <button class="submitButton" type="submit">
+                        Submit
+                    </button>
+    
+                    <button class="closePopUp" type="button" onclick="popUpForm()">
+                        Close
+                    </button>
+
+                </div>
+                
+
+            </form>
+
+        </div>
 
     </div>
 
