@@ -12,65 +12,59 @@
 
         <strong><p id="headerText">BookeD3X</p></strong>
 
-        <button id="signInButton" onclick=""><strong>Sign in</strong></button>
+        <button id="logInButton" onclick=""><strong>Log in</strong></button>
 
     </header>
 
     <div id="content">
 
+        <button class="buttonPopUp" id="addBookButton" onclick="popUpForm()">
+            <p id="buttonText"><strong>+ Add book</strong></p>
+        </button>
+
         <div id="library">
 
         </div>
-
-        <button class="buttonPopUp" id="addBookButton" onclick="popUpForm()"><img id="plus" src="icons/plus-svgrepo-com.svg"></button>
-        
-
+    
     </div>
 
     <div id="popUpContainer">
 
         <div class="popUpBox">
 
-            <h2>Add new book</h2>
+            <h2 id="formTitle">Add new book</h2>
 
             <form class="popUpForm">
 
                 <div class="forms">
-                    <label class="form-label"
-                            for="name">
-                        Name:
-                    </label>
-                    <input class="form-input" type="text" id="name" required> 
+                    
+                    <input class="form-input" type="text" id="name" placeholder="Title" required> 
 
                 </div>
 
                 <div class="forms">
-                <label class="form-label"
-                    for="author">
-                    Author:
-                </label>
-                <input class="form-input" type="text" id="author" required> 
+                
+                <input class="form-input" type="text" id="author" placeholder="Author" required> 
 
                 </div>
 
                 <div class="forms">
-                    <label class="form-label"
-                        for="pages">
-                        Pages:
-                    </label>
-                    <input class="form-input" type="number" id="pages" required> 
+                    
+                    <input class="form-input" type="number" id="pages" placeholder="Pages" required> 
                 
                 </div>
 
-                <div class="formButtons">
+                <div class="forms" id="checkbox">
+                    
+                    <p>Have you read it?</p>
+                    <input class="form-checkbox" type="checkbox" id="read"> 
+                
+                </div>
 
-                    <button class="submitButton" type="submit">
-                        Submit
-                    </button>
-    
-                    <button class="closePopUp" type="button" onclick="popUpForm()">
-                        Close
-                    </button>
+                <div class="forms">
+
+                    <button id="submitButton">Submit</button>
+                    <button id="popUpCloseButton" onclick="closeForm()"><img src="icons/delete.png"></button>
 
                 </div>
                 
@@ -80,8 +74,6 @@
         </div>
 
     </div>
-
-    <footer>©D3X</footer>
 
 
     <script src="main.js"></script>    

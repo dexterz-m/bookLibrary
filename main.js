@@ -1,6 +1,16 @@
+
+var overlay = document.getElementById('popUpContainer');
+
+
 function popUpForm(){
-  const overlay = document.getElementById('popUpContainer');
-  overlay.classList.toggle('show');
+  overlay.classList.remove('hide');
+  overlay.classList.add('show');
+}
+
+function closeForm(){
+  overlay.classList.remove('show');
+  overlay.classList.add('hide');
+
 }
 
 
