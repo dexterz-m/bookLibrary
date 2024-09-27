@@ -1,6 +1,9 @@
 
-var overlay = document.getElementById('popUpContainer');
+const overlay = document.getElementById('popUpContainer');
+const closeButton = document.getElementById('popUpCloseButton')
+let forms = document.querySelectorAll('input');
 
+// Open and close overlay to add book
 
 function popUpForm(){
   overlay.classList.remove('hide');
@@ -10,9 +13,15 @@ function popUpForm(){
 function closeForm(){
   overlay.classList.remove('show');
   overlay.classList.add('hide');
-
 }
 
+// Clear all form input
+
+closeButton.addEventListener('click', () => {
+  forms.forEach(form => form.value = '');
+})
+
+// Content
 
 const myLibrary = [];
 
@@ -21,11 +30,8 @@ function Book(name, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
-
-    this.sayInfo = function() {
-      console.log(this.name, this.author, this.pages, this.read);
-    }
 }
+
 
 function addBookToLibrary() {
   // do stuff here
