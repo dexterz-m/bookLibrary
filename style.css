@@ -36,21 +36,6 @@ header{
     background-color: rgb(200, 200, 200);
 }
 
-/* Content */
-
-#content{
-    display: block;
-    height: 78.5vh;
-    width: 100%;
-    text-align: center;
-}
-
-#library{
-    display: flex;
-    margin-top: 5vh;
-    flex-wrap: wrap;
-}
-
 #addBookButton{
     border-radius: 20px;
     margin-top: 5vh;
@@ -67,6 +52,68 @@ header{
 
 #buttonText{
     font-size: 20px;
+}
+
+/* Content */
+
+#content{
+    display: block;
+    height: 78.5vh;
+    width: 100%;
+    text-align: center;
+}
+
+#library{
+    display: flex;
+    justify-content: center;
+    margin-top: -2vh;
+    margin-inline: 5%;
+    flex-wrap: wrap;
+}
+
+/* Book display */
+
+.bookDiv{
+    background-color: rgb(47, 47, 47);
+    color: white;
+    padding: 5px;
+    margin-top: 5vh;
+    margin-inline: 15px;
+    width: 200px;
+    height: 30vh;
+    overflow-wrap: break-word;
+    border-radius: 10px;
+}
+
+#bookName{
+    margin-top: 2vh;
+}
+
+#bookAuthor{
+    font-size: 18px;
+    margin-top: 2vh;
+}
+
+#bookPages{
+    margin-top: 2vh;
+}
+
+.bookDisplayButton{
+    width: 80%;
+    text-align: center;
+    background-color: white;
+    color: rgb(47, 47, 47);
+    border-radius: 5px;
+    margin-top: 2vh;
+    font-size: 20px;
+    padding-inline: 20px;
+    padding-block: 3px;
+    border: none;
+}
+
+.bookDisplayButton:hover{
+    cursor: pointer;
+    background-color: rgb(200, 200, 200);
 }
 
 /* PopUp Container */
