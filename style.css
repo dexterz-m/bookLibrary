@@ -26,7 +26,7 @@ header{
     height: 5vh;
     max-height: 6vh;
     width: 100px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     color:  rgb(47, 47, );
     border: none;
 }
@@ -145,7 +145,8 @@ header{
     width: 35%;
     max-width: 225px;
     display: block;
-    height: 45vh;
+    min-height: 45vh;
+    max-height: 55vh;
     background-color: #C5C6C7;
     color: rgb(47, 47, 47);
     text-align: center;
@@ -180,16 +181,25 @@ header{
 
 #checkbox p{
     font-size: 17px;
-    margin-block: 2vh;
-    margin-inline: 5%;
 }
 
 #checkbox input{
-    width: 20px;
+    width: 23px;
 }
 
 #checkbox input:hover{
     cursor: pointer;
+}
+
+#errMsg{
+    display: none;
+    margin: 0;
+}
+
+#errMsg.show{
+    color: #ea0e2b;
+    display: block;
+    padding-bottom: 10px;
 }
 
 #submitButton{
@@ -225,4 +235,8 @@ header{
 
 #popUpCloseButton img{
     width: 20px;
+}
+
+.formButton{
+    margin-bottom: 10px;
 }
