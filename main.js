@@ -52,23 +52,23 @@ function checkInput(bookInfo) {
   x = 0
 
   if(bookInfo.name == ''){
-    nameInput.style.background = 'red';
+    nameInput.style.borderColor = 'red';
   }else{
-    nameInput.style.background = 'white';
+    nameInput.style.borderColor = 'rgba(255, 255, 255, 0)';
     x += 1
   }
 
   if(bookInfo.author == ''){
-    authorInput.style.background = 'red';
+    authorInput.style.borderColor = 'red';
   }else{
-    authorInput.style.background = 'white';
+    authorInput.style.borderColor = 'rgba(255, 255, 255, 0)';
     x += 1
   }
 
   if(bookInfo.pages == ''){
-    pagesInput.style.background = 'red';
+    pagesInput.style.borderColor = 'red';
   }else{
-    pagesInput.style.background = 'white';
+    pagesInput.style.borderColor = 'rgba(255, 255, 255, 0)';
     x += 1
   }
 
@@ -139,9 +139,9 @@ function addBookToLibrary() {
 
       setTimeout(function(){
         ErrorMsg.className = 'hide'
-        nameInput.style.background = 'white';
-        authorInput.style.background = 'white';
-        pagesInput.style.background = 'white';
+        nameInput.style.borderColor = 'rgba(255, 255, 255, 0)';
+        authorInput.style.borderColor = 'rgba(255, 255, 255, 0)';
+        pagesInput.style.borderColor = 'rgba(255, 255, 255, 0)';
       },1500);
     }
 }
