@@ -32,19 +32,6 @@ function clearForm(){
   checkBox.checked = false
 }
 
-// Toggle READ/UNREAD
-
-function toggleRead(bookinfo) {
-
-  if(bookinfo.read == true){
-    bookinfo.read = false
-  } else{
-    bookinfo.read = true
-  }
-
-  Book()
-}
-
 // Check input
 
 function checkInput(bookInfo) {
@@ -75,8 +62,19 @@ function checkInput(bookInfo) {
   if(x === 3){
     return bookInfo.name, bookInfo.author, bookInfo.pages
   }
-
 }
+
+// Toggle READ/UNREAD
+
+function toggleRead(id) {
+  const index = myLibrary.findIndex(bookinfo => bookinfo.id === id);
+  if (index !== -1) {
+    myLibrary[index].read = !myLibrary[index].read;
+    Book()
+  }
+  
+}
+
 
 // Remove book from Display
 
@@ -99,12 +97,14 @@ function Book() {
 
       const bookDiv = document.createElement('div');
       bookDiv.className = 'bookDiv';
-    
+
       bookDiv.innerHTML = `
           <h3 id="bookName">"${bookinfo.name}"</h3>
           <p id="bookAuthor"> ${bookinfo.author}</p>
           <p id="bookPages">${bookinfo.pages} pages</p>
-          <button class="bookDisplayButton" id="readButton" onClick="toggleRead(${bookinfo})"> ${bookinfo.read} </button>
+          <button class="bookDisplayButton" id="readButton" onClick="toggleRead('${bookinfo.id}')">
+            ${bookinfo.read ? 'Read' : 'Not Read'}
+          </button>
           <button class="bookDisplayButton" id="removeButton" onClick="removeBook('${bookinfo.id}')">Remove</button>
       `;
     
